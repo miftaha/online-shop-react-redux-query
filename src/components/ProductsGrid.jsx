@@ -1,5 +1,6 @@
 import { Link, useLoaderData } from 'react-router-dom'
 import { formatPrice } from '../utils'
+
 const ProductsGrid = () => {
   const { products } = useLoaderData()
 
