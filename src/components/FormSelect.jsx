@@ -1,13 +1,13 @@
-/* eslint-disable react/prop-types */
-const FormSelector = ({ label, name, list, defaultValue, size }) => {
+const FormSelect = ({ label, name, list, defaultValue, size }) => {
   return (
     <div className="form-control">
       <label htmlFor={name} className="label">
-        <span className=" label-text capitalize">{label}</span>
+        <span className="label-text capitalize">{label}</span>
       </label>
       <select
-        className={`select select-bordered${size}`}
+        name={name}
         id={name}
+        className={`select select-bordered ${size}`}
         defaultValue={defaultValue}
       >
         {list.map((item) => {
@@ -21,4 +21,4 @@ const FormSelector = ({ label, name, list, defaultValue, size }) => {
     </div>
   )
 }
-export default FormSelector
+export default FormSelect
